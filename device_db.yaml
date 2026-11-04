@@ -27,7 +27,7 @@ MODULE_ATLO_M4ZSM_TUYA:
   tuya_module: ZT3L
   mcu_family: Telink
   mcu: TLSR8258
-  config_str: _TZ3000_gru8stzh;TS0044-ATLO4CH;M;SB5u;SB4u;SC0u;SC3u;LC2;RD2;
+  config_str: _TZ3000_gru8stzh;TS0044-ATLO4CH;LC2;BD2d;SC3u;SC0u;SB4u;SB5u;
   alt_config_str: null
   old_manufacturer_names: null
   old_zb_models: null
