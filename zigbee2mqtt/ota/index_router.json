@@ -1,12 +1,12 @@
 [
   {
-    "fileName": "tlc_switch-1.1.3-b831105a.zigbee",
+    "fileName": "tlc_switch-1.1.3-ef52b553.zigbee",
     "fileVersion": 285421568,
     "fileSize": 182226,
-    "url": "https://github.com/devydd/tuya-zigbee-switch/raw/afd9f57a996db08a35400d2a0a80c900a93eaa7a/bin/router/MODULE_ATLO_M4ZSM_TUYA/tlc_switch-1.1.3-b831105a.zigbee",
+    "url": "https://github.com/devydd/tuya-zigbee-switch/raw/refs/heads/main/bin/router/MODULE_ATLO_M4ZSM_TUYA/tlc_switch-1.1.3-ef52b553.zigbee",
     "imageType": 0,
     "manufacturerCode": 4417,
-    "sha512": "629cb58fcefcf3b3893561a882d12da069b76b10c62f042473ecf0a35ed4fc917d26ad404416948f8847405483706ed3148645f92a4abacec7b3930faee22d3a",
+    "sha512": "d0e6fa9cf027fe26f7813601a9b9b7684ad71cbce0e5cf59b81c91e42977cdb89f28261e26461677cdfcdeedb4d3e601e54d05eeec6ec6c6c31cffe35d665aa1",
     "otaHeaderString": "Telink OTA Image\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
     "manufacturerName": [
       "_TZ3000_gru8stzh",
