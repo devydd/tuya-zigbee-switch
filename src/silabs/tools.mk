@@ -101,15 +101,24 @@ commander: $(TOOLS_DIR)/commander
 $(TOOLS_DIR)/commander: | $(DOWNLOAD_DIR)
 	@echo "Downloading Simplicity Commander..."
 	@if [ ! -f "$(DOWNLOAD_DIR)/SimplicityCommander-Linux.zip" ]; then \
-		echo "Attempting to download from: $(COMMANDER_URL)"; \
+		echo "Attempting to download from (4): $(COMMANDER_URL)"; \
 		if ! curl --url "$(COMMANDER_URL)" \
-                -H 'accept: */*' \
-                -H 'accept-language: en-US' \
-                -H 'priority: u=0, i' \
-                -H 'sec-ch-ua: "Not:A-Brand";v="8", "Chromium";v="156", "Google Chrome";v="156"' \
-                -H 'sec-ch-ua-mobile: ?0' \
-                -H 'sec-ch-ua-platform: "Windows"' \
-                -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)'  \
+				  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \
+				  -H 'accept-language: en-US,en;q=0.9,pl-PL;q=0.8,pl;q=0.7' \
+				  -H 'cache-control: no-cache' \
+				  -b 'osano_consentmanager_uuid=2b6d4989-348c-4de6-bacd-3a636d6c4b62; osano_consentmanager=i6k72zWmJmRBNMiUYgf1eeEVm1z1vzqsFKMn-a21u4z1zCFOAwRHWm3q7z_f6ydP8fgKN-2t5lTGkolf1_uGcxyz0mKCgPWypdZtBl5CQk1d3QDr89hBNHLd34qi3MiH-ZU65Gp7062CQpgRJs7nSMg7LznlcV3gQ-CmYLRhUAnm1nn26JOmaUN2419wuixBYatvvEITbn7mL71g21KDK7R5xu_WnTSI8FSil3XFxayY3zS0BBWtYAcqqEdi-8zxwnbOCMuen6Ko-i5dDxU_jZTENHOb1uiJlW9LiFHjoYC-NKyy71mvJG3jewRts6YT' \
+				  -H 'dnt: 1' \
+				  -H 'pragma: no-cache' \
+				  -H 'priority: u=0, i' \
+				  -H 'sec-ch-ua: "Not:A-Brand";v="8", "Chromium";v="156", "Google Chrome";v="156"' \
+				  -H 'sec-ch-ua-mobile: ?0' \
+				  -H 'sec-ch-ua-platform: "Windows"' \
+				  -H 'sec-fetch-dest: document' \
+				  -H 'sec-fetch-mode: navigate' \
+				  -H 'sec-fetch-site: none' \
+				  -H 'sec-fetch-user: ?1' \
+				  -H 'upgrade-insecure-requests: 1' \
+				  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36' \
 			-o "$(DOWNLOAD_DIR)/SimplicityCommander-Linux.zip" \
 			--fail --show-error --connect-timeout 30; then \
 			echo "Download failed. Please manually download SimplicityCommander-Linux.zip"; \
