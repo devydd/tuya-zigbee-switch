@@ -13,7 +13,7 @@ SIMPLICITY_SDK_ARCHIVE := simplicity-sdk-$(SIMPLICITY_SDK_VERSION).zip
 SIMPLICITY_SDK_URL := $(SIMPLICITY_SDK_REPO)/releases/download/v$(SIMPLICITY_SDK_VERSION)/simplicity-sdk.zip
 
 # Silicon Labs download URLs
-COMMANDER_URL := https://www.silabs.com/documents/public/software/SimplicityCommander-Linux.zip
+COMMANDER_URL := https://www.silabs.com/documents/login/software/SimplicityCommander-Linux.zip
 SLC_CLI_URL := https://www.silabs.com/documents/public/software/slc_cli_linux.zip
 
 # ZAP tool configuration
@@ -102,7 +102,14 @@ $(TOOLS_DIR)/commander: | $(DOWNLOAD_DIR)
 	@echo "Downloading Simplicity Commander..."
 	@if [ ! -f "$(DOWNLOAD_DIR)/SimplicityCommander-Linux.zip" ]; then \
 		echo "Attempting to download from: $(COMMANDER_URL)"; \
-		if ! curl -L "$(COMMANDER_URL)" \
+		if ! curl --url "$(COMMANDER_URL)" \
+                -H 'accept: */*' \
+                -H 'accept-language: en-US' \
+                -H 'priority: u=0, i' \
+                -H 'sec-ch-ua: "Not:A-Brand";v="8", "Chromium";v="156", "Google Chrome";v="156"' \
+                -H 'sec-ch-ua-mobile: ?0' \
+                -H 'sec-ch-ua-platform: "Windows"' \
+                -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)'  \
 			-o "$(DOWNLOAD_DIR)/SimplicityCommander-Linux.zip" \
 			--fail --show-error --connect-timeout 30; then \
 			echo "Download failed. Please manually download SimplicityCommander-Linux.zip"; \
